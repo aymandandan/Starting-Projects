@@ -1,0 +1,264 @@
+
+* {
+    cursor: default;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0;
+    height: 90vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #1a1a24;
+}
+
+#nav {
+    width: 99%;
+    border-top: 3px solid #546797;
+    border-bottom: 3px solid #546797;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: #344246;
+    display: flex;
+    justify-content: space-between;
+}
+
+#difficultySelect {
+    padding: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 5px;
+    background-color: #8f8fa3;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#difficultySelect:focus {
+    outline: none;
+}
+
+#difficultySelect:hover {
+    background-color: #7e7e94;
+    cursor: pointer;
+}
+
+#start-button, #custom-submit {
+    background-color: aquamarine;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 16px;
+    transition: background-color 0.1s ease-in-out;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+}
+
+#start-button:hover, #custom-submit:hover {
+    background-color: #60dab1;
+    cursor: pointer;
+}
+
+#leaderboard {
+    background-color:#8f8fa3;
+    color: white;
+    padding: 3px 5px;
+    margin-right: 8px;
+    border-radius: 5px;
+    border: 1px solid brown;
+}
+
+#game-head {
+    display: flex;
+}
+
+#mines-left, #timer {
+    background-color: #1a1a24;
+    color: #ff0000;
+    font-size: 20px;
+    padding: 3px 5px;
+    margin: 3px;
+    border-radius: 6px;
+}
+
+#bigContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.game-container {
+    border: 3px solid #595a5a;
+    padding: 5px;
+    border-radius: 9px;
+    box-shadow: 0 2px 5px #1b1c1d;
+}
+
+#game-head {
+    border: 3px solid grey;
+    border-radius: 10px;
+    padding: 0px;
+    display: flexbox;
+    justify-content: space-between;
+}
+
+#restart-button {
+    padding: 5px;
+    font-size: larger;
+    border: none;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+#restart-button:hover {
+    cursor: pointer;
+}
+
+#game {
+    display: grid;
+
+}
+
+.grid {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid #1b1c1d;
+    background-color: #7e7e94;
+    font-weight: 600;
+    box-shadow: 3px 3px inset #7e7e94, -1px -1px inset #344246 ;
+}
+
+.gridBlock {
+    background-color: #7e7e94;
+    box-shadow: 3px 3px inset #7e7e94, -1px -1px inset #344246 ;
+}
+
+.gridBlock:active {
+    background-color: #8f8fa3;
+    box-shadow: 3px 3px inset #344246, -1px -1px inset #8f8fa3;
+}
+
+.gridOpen {
+    border: 0.5px solid #696d72;
+    background-color: #acacbe;
+    box-shadow: none;
+}
+
+.gridMine {
+    background-color: #661b1b;
+    box-shadow: 0 0 inset #661b1b;
+}
+
+.nb1 {
+    color: blue;
+}
+.nb2 {
+    color: green;
+}
+.nb3 {
+    color: #a00000;
+}
+.nb4 {
+    color: #00003a;
+}
+.nb5 {
+    color: #3a1515;
+}
+.nb6 {
+    color: #008f8f;
+}
+.nb7 {
+    color: #050404;
+}
+.nb8 {
+    color: deeppink;
+}
+
+.customPopUp {
+    display: block;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 3px 5px #1b1c1d;
+    background-color: azure;
+}
+
+#custom-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#custom-form div {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#custom-form label {
+    color: #1b1c1d;
+    font-weight: 600;
+}
+
+#custom-form input {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid grey;
+    margin-left: 10px;
+}
+
+#custom-submit {
+    margin: 10px 5px 5px 5px;
+}
+
+@keyframes customPopUp-animation {
+    0% {
+        position: absolute;
+        display: none;
+        opacity: 0;
+        transform: translateZ(0);
+        scale: 0;
+    }
+    100% {
+        position: fixed;
+        display: block;
+        opacity: 1;
+        transform: translateZ(5);
+        scale: 1;
+    }
+}
+
+@keyframes customPopUp-animation-reverse {
+    0% {
+        position: fixed;
+        display: block;
+        opacity: 1;
+        transform: translateZ(5);
+        scale: 1;
+    }
+    100% {
+        position: absolute;
+        display: none;
+        opacity: 0;
+        transform: translateZ(0);
+        scale: 0;
+    }
+}
+
+.blur-background {
+    position: absolute;
+    width: 99vw;
+    height: 99vh;
+    filter: blur(5px);
+    background-color: rgba(0,0,0,0.3);
+    transform: translateZ(4);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineSweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MineSweeper</h1>
+    <div id="nav">
+        <div id="difficulty">
+            <select name="difficultySelect" id="difficultySelect">
+                <option value="default">Select Your Difficulty</option>
+                <option class="difficultyOption" value="easy">Easy</option>
+                <option class="difficultyOption" value="medium">Medium</option>
+                <option class="difficultyOption" value="hard">Hard</option>
+                <option class="difficultyOption" value="custom">Custom</option>
+            </select>
+        </div>
+        <button id="start-button">Start</button>
+        <div id="leaderboard">Highest Score: <span id="leaderboardValue">000</span></div>
+    </div>
+
+    <div id="bigContainer">
+        <div class="game-container">
+            <div id="game-head">
+                <div id="mines-left">999</div>
+                <button type="button" id="restart-button"> 🙂 </button>
+                <div id="timer">000</div>
+            </div>
+            <div id="game"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
